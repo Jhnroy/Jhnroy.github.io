@@ -3,70 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Web development workshop</title>
+    <title>Professional Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
 </head>
-
-
-
 <body>
-    <section class="container section">
-        <div>
-            <header>
-                <p class="made">John Roy Rasco</p>
-            
+    <header>
+        <div class="container">
+            <h1>John Roy Rasco</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <nav>
-            <div class="button">
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Contacts</a>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <div class="text">
+                <h3>UI/UX Designer</h3>
+                <h1>Hello, I'm John Roy</h1>
+                <p>Aspiring UI/UX Designer and Frontend Developer.</p>
+                <div class="buttons">
+                    <a href="#projects" class="btn primary">Projects</a>
+                    <a href="#" class="btn secondary">LinkedIn</a>
+                </div>
             </div>
-        </nav>    
-    </section>
-
-    <section class="container section2">
-        <div>
-            <h3>UI/UX Designer</h3>
-            <h1>Hello,  my name is John Roy</h1>
-            <p>Aspiring UI/UX Designer and Front Developer</p>
-
-            <a href="https://www.figma.com/proto/gsAw6JeuogBUwawaTX1gU0/Shopify?type=design&node-id=2-2&t=AjyFVs3ZSAJgqNYa-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2&show-proto-sidebar=1&mode=design" target="_blank">Projects</a>
-
-            <a id="LinkedIn-Btn" href="https://www.linkedin.com/in/john-roy-rasco-04bb8b297/" target="_blank">LinkedIn</a>
+            <div class="profile">
+                <img src="RascoJohnRoy.jpg" alt="Profile Picture">
+            </div>
         </div>
     </section>
-
-    <section>
-        <div id="profilePic">
-            <img  src="rasco_john_roy-removebg-preview.png" alt="MyPhoto">
-        </div>
-    </section>
-
-    <section>
-        <h1 id="projects">Projects</h1>
-        <div class="project-1">
-            <img src="project-nfo.svg" alt="girl">
-            <img id="img1" src="pexels-elly-fairytale-3823207 1.png" alt="">
-        </div>
     
-    
-        <div class="project-2">
-            <img id="img2" src="Rectangle 7.png" alt="rectangle">
-            <img  src="project-nfo.svg" alt="">
-        </div>
-
-        <div class="project-3">
-            <img src="project-nfo.svg" alt="">
-            <img id="img3" src="Rectangle 7 (1).png" alt="rectangle" >
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <a href="https://www.figma.com/proto/gsAw6JeuogBUwawaTX1gU0/Shopify?node-id=2-2&p=f&t=ICTEnpfzeN4OjiON-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2&show-proto-sidebar=1" class="project" target="_blank">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Shoppify</h3>
+            </a>
+            <a href="https://www.figma.com/proto/k3gPizoYAd9xRBfnzz3KKb/HospitalAppoitmentApp?node-id=8-2&p=f&t=zv27Dqtw4jYm8zvP-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A2&show-proto-sidebar=1" class="project" target="_blank">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Hospital Appoitment App</h3>
+            </a>
         </div>
     </section>
+    
     <footer>
-        <a  href="#"><img id="linkedin" src="104493_linkedin_icon.svg"/></a>
-        <a href="#"><img id="instagram" src="1161953_instagram_icon.svg"/></a>
-        <a href="#"><img id="envelope" src="8665305_envelope_email_icon.svg"/></a>
-        <p>John Roy Rasco 2023</p>
+        <p>&copy; 2025 John Roy Rasco | Designed with ❤️</p>
     </footer>
 </body>
 </html>
