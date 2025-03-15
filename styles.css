@@ -110,12 +110,13 @@ nav ul li a:hover {
 }
 
 .btn.primary {
-    background-color: #FDC435;
+    background-color: #f1c34d;
     color: #1E3A8A;
 }
 
 .btn.primary:hover {
     background-color: #FFB800;
+    cursor: pointer;
 }
 
 .btn.secondary {
@@ -186,6 +187,33 @@ nav ul li a:hover {
     font-weight: 600;
 }
 
+
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background: #1E1E1E;
+    color: #FFFFFF;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #FDC435;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover{
+    background: #E0A800;
+}
 /* Footer */
 footer {
     text-align: center;
