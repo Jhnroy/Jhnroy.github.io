@@ -4,8 +4,21 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
 body {
     background-color: #F4F4F4;
     color: #333;
@@ -16,6 +29,51 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover animations */
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth slide-in animations */
+.project, .certificate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.project.show, .certificate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar shrink on scroll */
+header {
+    transition: all 0.4s ease;
+}
+
+header.shrink {
+    padding: 10px 0;
+    background-color: rgba(30, 58, 138, 0.9);
+}
+
 
 /* Header */
 header {
@@ -188,6 +246,50 @@ nav ul li a:hover {
 }
 
 
+.certificates {
+    text-align: center;
+    padding: 80px 5%;
+    background-color: #F4F4F4;
+}
+
+.certificates h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.certificate-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.certificate {
+    background: #E5E7EB;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+    max-width: 300px;
+}
+
+.certificate:hover {
+    transform: scale(1.05);
+}
+
+.certificate img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.certificate h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
 .contact {
     text-align: center;
     padding: 50px 20px;
@@ -223,6 +325,25 @@ footer {
     font-size: 14px;
 }
 
+
+/* Burger Menu Button */
+.menu-toggle {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero-content {
@@ -238,27 +359,90 @@ footer {
     }
 }
 
+
+/* mobile view */
 @media (max-width: 768px) {
-    nav ul {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* Burger Menu Button */
+    .menu-toggle {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001; /* Ensures it stays on top */
     }
-    nav ul li {
-        margin: 10px 0;
+
+    .menu-toggle .bar {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.4s;
     }
-    .hero {
-        padding: 80px 5%;
+
+    /* Nav Menu - Now Smaller & Floating */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background-color: #1E3A8A;
+        position: fixed;
+        top: 10%;
+        right: -220px; /* Initially hidden */
+        height: auto;  /* No full screen */
+        width: 200px;
+        text-align: right;
+        padding: 20px 10px;
+        transition: right 0.4s ease-in-out;
+        box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px 0 0 10px; /* Rounded left edges */
     }
-    .text h1 {
-        font-size: 36px;
+
+    /* Show menu when active */
+    .nav-links.active {
+        right: 10px; /* Slides in but doesn’t cover the whole screen */
     }
-    .text p {
+
+    .nav-links a {
+        color: white;
         font-size: 16px;
+        padding: 12px;
+        display: block;
+        text-decoration: none;
+        transition: background 0.3s;
+        border-radius: 5px;
     }
-    .btn {
-        font-size: 14px;
+
+    .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Burger Menu Animation */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
     }
 }
+
 
 @media (max-width: 480px) {
     .hero {
@@ -279,3 +463,4 @@ footer {
         height: 150px;
     }
 }
+
