@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-
     <link rel="icon" href="rasco_john_roy-removebg-preview.png">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-
 </head>
 <body>
     <!-- Header -->
@@ -34,13 +28,12 @@
                     <li><a href="#hero">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#gallery">Gallery</a></li> <!-- Added Gallery -->
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
-    
     
     <section class="hero" id="hero">
         <div class="hero-content">
@@ -58,7 +51,6 @@
             </div>
         </div>
     </section>
-    
 
     <!-- Projects -->
     <section id="projects" class="projects">
@@ -70,12 +62,12 @@
             </a>
             <a href="https://www.figma.com/proto/k3gPizoYAd9xRBfnzz3KKb/HospitalAppoitmentApp?node-id=8-2&p=f&t=zv27Dqtw4jYm8zvP-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A2&show-proto-sidebar=1" class="project" target="_blank">
                 <img src="project2.jpg" alt="Project 2">
-                <h3>Hospital Appoitment App</h3>
+                <h3>Hospital Appointment App</h3>
             </a>
         </div>
     </section>
 
-    <!-- Certificate -->
+    <!-- Certificates -->
     <section id="certificates" class="certificates">
         <h2>Certificates</h2>
         <div class="certificate-grid">
@@ -84,48 +76,60 @@
                     <h3>UI/UX Design Certification</h3>
                 </a>
             </div>
-
-
             <div class="certificate">
                 <a href="WebCertificate.pdf" target="_blank">
                     <h3>Web Development 101 Workshop</h3>
                 </a>
             </div>
-
             <div class="certificate">
                 <a href="GraphicsDesignCertificate.pdf" target="_blank">
                     <h3>Graphics Design Certification</h3>
                 </a>
             </div>
-            
         </div>
     </section>
-    
+
+    <!-- Photography Gallery -->
+    <section id="gallery" class="gallery">
+        <h2>Photography Gallery</h2>
+        <div class="gallery-grid">
+            <img src="Alawihao.jpg" alt="Photography 1" onclick="openLightbox(this)">
+            <img src="BGB.jpg" alt="Photography 2" onclick="openLightbox(this)">
+            <img src="Geometry.jpg" alt="Photography 3" class="portrait" onclick="openLightbox(this)">
+            <img src="Bliss.jpg" alt="Photography 4" onclick="openLightbox(this)">
+            <img src="CN.jpg" alt="Photography 5" onclick="openLightbox(this)">
+            <img src="BudBonggao.jpg" alt="Photography 6" onclick="openLightbox(this)">
+            <img src="airplane.jpg" alt="Photography 7" class="portrait" onclick="openLightbox(this)">
+            <img src="Panol.jpg" alt="Photography 8" onclick="openLightbox(this)">
+            <img src="Building.jpg" alt="Photography 9" class="portrait" onclick="openLightbox(this)">
+            <img src="Takipsilim.jpg" alt="Photography 10" onclick="openLightbox(this)">
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
     <!-- Contact -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <form action="#" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-            
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
-            
             <button type="submit" class="btn primary">Send Message</button>
         </form>
     </section>
-    
-
 
     <footer>
         <p>&copy; 2025 John Roy Rasco</p>
     </footer>
 
-
     <script src="script.js"></script>
-
 </body>
 </html>
