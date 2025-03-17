@@ -63,7 +63,15 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
+#projects a,
+#certificates a {
+    text-decoration: none; /* Removes any underline */
+}
+#projects a:hover,
+#certificates a:hover {
+    text-decoration: underline; /* Removes any underline */
+    transition: 1s ease-in;
+}
 /* Navbar shrink on scroll */
 header {
     transition: all 0.4s ease;
@@ -250,6 +258,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 80px 5%;
     background-color: #F4F4F4;
+    
 }
 
 .certificates h2 {
@@ -267,6 +276,7 @@ nav ul li a:hover {
 
 .certificate {
     background: #E5E7EB;
+    
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -275,6 +285,7 @@ nav ul li a:hover {
 }
 
 .certificate:hover {
+    
     transform: scale(1.05);
 }
 
